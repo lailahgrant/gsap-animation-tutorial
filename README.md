@@ -1,4 +1,4 @@
-## Web Animations Full Course 2025 _ Build an Awwwards Website _ Master GSAP in Two Hours by Adrian (JavaScript Mastery)
+## Web Animations Full Course 2025 _ Master GSAP by Adrian (JavaScript Mastery)
 
 > Web Animations enable web developers build `experiences`.
 
@@ -13,8 +13,7 @@
 
 - ✨ [Introduction](#introduction)
 - ⚙️ [Tech Stack](#tech-stack)
--    [Why GSAP](#why-gsap)
-- 🔋  [Features](#features)
+- 🔋  [Why GSAP](#why-gsap)
 - 🚀 [Quick Start](#quick-start)
 - ⚙️ [How to Animate using GSAP](#animate-using-gsap)
 
@@ -55,28 +54,6 @@ Simple GSAP workshop showcasing various primary animations. GSAP (GreenSock Anim
 - [x] How to sequence animations one after another with `gsap.timeline()`
 
 
-## <br /> <a name="features">🔋 Features</a>
-👉 **SplitText Animations**: Create impactful text reveals using GSAP’s SplitText for dynamic intros and section highlights.
-
-👉 **ScrollTrigger Effects**: Power scroll-based animations and timeline control with GSAP’s ScrollTrigger.
-
-👉 **Parallax Scrolling**: Add immersive depth with smooth parallax effects that respond to user scroll.
-
-👉 **Pinned Sections**: Lock sections in view while animating content for engaging scroll experiences.
-
-👉 **Scroll-Synced Video Playback**: Sync video progress with scroll position for cinematic storytelling.
-
-👉 **Image Masking Effects**: Use scroll-triggered pins and masks for visually striking image transitions.
-
-👉 **Custom Carousel**: Build a fully customized carousel with multiple navigation options and animated slides.
-
-👉 **Seamless Timeline Animations**: Craft smooth animation timelines that span across multiple sections.
-
-👉 **Responsive Design**: Ensure fluid UI and adaptive GSAP animations across all screen sizes.
-
-And many more, including enhanced security and optimized video performance!
-
-
 ## <br /> <a name="quick-start">🚀 Quick Start</a>
 
 
@@ -85,9 +62,7 @@ Follow these steps to set up the project locally on your machine.
 
 <br/>**Prerequisites**
 
-
 Make sure you have the following installed on your machine:
-
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en)
