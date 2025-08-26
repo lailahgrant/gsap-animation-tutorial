@@ -19,7 +19,7 @@ const GsapFromTo = () => {
         ease: 'bounce.out'
       }
     )
-  });
+  }, []);
 
   return (
     <main>

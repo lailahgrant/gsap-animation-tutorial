@@ -123,10 +123,10 @@ npm install gsap @gsap/react
 ##  <br /> <a name="animate-using-gsap">⚙️ How to Animate using GSAP</a>
 
 **Navigate to** `src` `pages` `GsapTo.jsx`
-
+- Import the `useGSAP` hook.
 - Import the `useGSAP` from `"@gsap/react"`
 - import `gsap` from `"gsap"`;
-- Define a callback function of `useGSAP`.
+- Define a callback function of `useGSAP` and pass the dependence array `[]`.
 - Use `useGSAP` to animate any element we want.
 
 ```jsx
@@ -160,7 +160,7 @@ const GsapFrom = () => {
       duration: 2,
       ease: 'power1.inOut'
     })
-  })
+  }, []);
 ```
 
 **GsapFromTo**
@@ -187,7 +187,13 @@ const GsapFromTo = () => {
         ease: 'bounce.out'
       }
     )
-  });
+  }, []);
 ```
+
+> The 3 base GSAP animations are `GsapTo` *`to()`*  `GsapFrom` *`from()`* and `GsapFromTo` *`fromTo()`*
+
+
+**GSAP Timeline**
+`timeline()`
 
 
