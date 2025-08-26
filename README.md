@@ -264,4 +264,69 @@ const GsapTimeline = () => {
 export default GsapTimeline;
 ```
 
+**GSAPStagger**
+- [x] Stagger is a `property` you can apply to any animation.
+- Use `gsap.to()` to apply animation
+- [x] apply a stagger property to animate one object at a time. `stagger: 0.5`
+- [x] apply *more stagger properties* by defining stagger as an **`object`**. 
+- [ ] You can pass the following properties to the stagger object:-
+  - [x] `amount` : amount of time to stagger the animation between each element. `amount: 1.5`
+  - [x] `grid` : selects the number of rows and columns in a grid, `grid: [2, 1]`
+  - [x] `axis` : choose the axis along the stagger animation, `axis: 'y'`
+  - [x] `ease` : type of animation, `ease: 'circ.inOut'`
+  - [x] `from`: starting position of the staggered animation. `from: 'center'` - the centered elements stagger first
+
+```jsx
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+const GsapStagger = () => {
+  // TODO: Implement the gsap.stagger() method
+
+  useGSAP(() => {
+    //stagger is a property used in anuy animation
+    // use .to()
+    gsap.to('.stagger-box', {
+      y: 250,
+      rotation: 350,
+      borderRadius: '100%',
+      repeat: -1,
+      yoyo: true,
+      /*apply a stagger property to animate one object at a time
+      stagger: 0.5*/
+
+      //apply more stagger properties by defining stagger as an object
+      stagger: {
+        amount: 1.5,
+        grid: [2, 1],
+        axis: 'y',
+        ease: 'circ.inOut',
+        from: 'center'
+      }
+    })
+  }, []);
+
+
+
+  return (
+    <main>
+      <h1>GsapStagger</h1>
+
+      <div className="mt-20">
+        <div className="flex gap-5">
+          <div className="w-20 h-20 bg-indigo-200 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-300 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-400 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-500 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-600 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-700 rounded-lg stagger-box" />
+          <div className="w-20 h-20 bg-indigo-800 rounded-lg stagger-box" />
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default GsapStagger;
+
+```
 
