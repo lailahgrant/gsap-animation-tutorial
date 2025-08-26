@@ -16,6 +16,7 @@
 -    [Why GSAP](#why-gsap)
 - 🔋  [Features](#features)
 - 🚀 [Quick Start](#quick-start)
+- ⚙️ [How to Animate using GSAP](#animate-using-gsap)
 
 ##  <br /> <a name="introduction">✨ Introduction</a>
 
@@ -119,5 +120,25 @@ Use the following command to start adding the **GSAP animations**:
 npm install gsap @gsap/react
 ```
 
+##  <br /> <a name="animate-using-gsap">⚙️ How to Animate using GSAP</a>
 
+Navigate to `src` `pages` `GsapTo.jsx`
+
+- Import the `useGSAP` from `"@gsap/react"`
+- import `gsap` from `"gsap"`;
+- Define a callback function of `useGSAP`.
+- Use `useGSAP` to animate any element we want.
+
+```jsx
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+const GsapTo = () => {
+  // TODO: Implement the gsap.to() method
+
+  useGSAP(() => {
+    // gsap.to("#blue-box", { x: 300, duration: 2 });
+    gsap.to('#blue-box', { x: 250, repeat: -1, yoyo: true, rotation: 360, duration: 2, ease: 'elastic' });
+  }, []);
+
+```
 
