@@ -111,4 +111,13 @@ npm run dev
 Open [`http://localhost:5173`](http://localhost:5173) in your browser to view the project.
 
 
+<br/>**Install GSAP**
+
+Use the following command to start adding the **GSAP animations**:
+
+```bash
+npm install gsap @gsap/react
+```
+
+
 
