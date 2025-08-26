@@ -122,6 +122,8 @@ npm install gsap @gsap/react
 
 ##  <br /> <a name="animate-using-gsap">⚙️ How to Animate using GSAP</a>
 
+**1. GsapTo**
+
 **Navigate to** `src` `pages` `GsapTo.jsx`
 - Import the `useGSAP` hook.
 - Import the `useGSAP` from `"@gsap/react"`
@@ -143,7 +145,7 @@ const GsapTo = () => {
 ```
 
 
-**Gsapfrom**
+**2. GsapFrom**
 
 ```jsx
 import { useGSAP } from "@gsap/react";
@@ -163,7 +165,7 @@ const GsapFrom = () => {
   }, []);
 ```
 
-**GsapFromTo**
+**3. GsapFromTo**
 
 ```jsx
 import { useGSAP } from "@gsap/react";
@@ -193,7 +195,7 @@ const GsapFromTo = () => {
 > The 3 base GSAP animations are `GsapTo` *`to()`*  `GsapFrom` *`from()`* and `GsapFromTo` *`fromTo()`*
 
 
-**GSAP Timeline**
+**4. GSAP Timeline**
 `timeline()`
 
 ```jsx
@@ -241,11 +243,6 @@ const GsapTimeline = () => {
     <main>
       <h1>GsapTimeline</h1>
 
-      <p className="mt-5 text-gray-500">
-        The <code>gsap.timeline()</code> method is used to create a timeline
-        instance that can be used to manage multiple animations.
-      </p>
-
       <div className="mt-20 space-y-10">
         <button onClick={() => {
           if (timeline.paused()) {
@@ -264,7 +261,7 @@ const GsapTimeline = () => {
 export default GsapTimeline;
 ```
 
-**GSAPStagger**
+**5. GSAPStagger**
 - [x] Stagger is a `property` you can apply to any animation.
 - Use `gsap.to()` to apply animation
 - [x] apply a stagger property to animate one object at a time. `stagger: 0.5`
@@ -305,8 +302,6 @@ const GsapStagger = () => {
     })
   }, []);
 
-
-
   return (
     <main>
       <h1>GsapStagger</h1>
@@ -327,12 +322,11 @@ const GsapStagger = () => {
 };
 
 export default GsapStagger;
-
 ```
 
-**GSAPScrollTrigger**
+**6. GSAPScrollTrigger**
 
-> - Gsap Scroll Trigger is a plugin that allows you to create animations that are triggered by the scroll position of the page.
+> Gsap Scroll Trigger is a plugin that allows you to create animations that are triggered by the scroll position of the page.
 
 - Need to import it from gsap. `import {ScrollTrigger} from "gsap/all"`
 - Register the plugin to make it work. `gsap.registerPlugin(ScrollTrigger)`
@@ -448,3 +442,81 @@ const GsapScrollTrigger = () => {
 
 export default GsapScrollTrigger;
 ```
+
+**7. GsapText**
+
+We can use same method like <code>gsap.to()</code>,{" "} <code>gsap.from()</code>, <code>gsap.fromTo()</code> and{" "} <code>gsap.timeline()</code> to animate text.
+
+Using these methods we can achieve various text animations and effects like fade in, fade out, slide in, slide out, and many more.
+
+```jsx
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+const GsapText = () => {
+  // TODO: Implement gsap text animation
+
+  useGSAP(() => {
+    gsap.to('#text', {
+      ease: 'power1.inOut',
+      opacity: 1,
+      y: 0,
+      delay: 1
+    })
+
+    //animate paragraph
+    //fromTo() - takes two objects of `from` `to` respectively
+    gsap.fromTo('.para', {
+      opacity: 0,
+      y: 20
+    }, {
+      opacity: 1,
+      y: 0,
+      delay: 1.5,
+      stagger: .5,
+    })
+
+  }, [])
+
+  return (
+    <main>
+      <h1 id="text" className="opacity-0 translate-y-10">
+        GsapText
+      </h1>
+
+      <p className="mt-5 text-gray-500 para">
+        We can use same method like <code>gsap.to()</code>,{" "}
+        <code>gsap.from()</code>, <code>gsap.fromTo()</code> and{" "}
+        <code>gsap.timeline()</code> to animate text.
+      </p>
+
+      <p className="mt-5 text-gray-500 para">
+        Using these methods we can achieve various text animations and effects
+        like fade in, fade out, slide in, slide out, and many more.
+      </p>
+
+      <p className="mt-5 text-gray-500 para">
+        For more advanced text animations and effects, you can explore the GSAP
+        TextPlugin or other third-party libraries that specialize in text
+        animations.
+      </p>
+
+      <p className="mt-5 text-gray-500 para">
+        Read more about the{" "}
+        <a
+          href="https://greensock.com/docs/v3/Plugins/TextPlugin"
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+        >
+          TextPlugin
+        </a>{" "}
+        plugin.
+      </p>
+    </main>
+  );
+};
+
+export default GsapText;
+
+```
+
+
