@@ -122,7 +122,7 @@ npm install gsap @gsap/react
 
 ##  <br /> <a name="animate-using-gsap">⚙️ How to Animate using GSAP</a>
 
-Navigate to `src` `pages` `GsapTo.jsx`
+**Navigate to** `src` `pages` `GsapTo.jsx`
 
 - Import the `useGSAP` from `"@gsap/react"`
 - import `gsap` from `"gsap"`;
@@ -161,6 +161,33 @@ const GsapFrom = () => {
       ease: 'power1.inOut'
     })
   })
+```
+
+**GsapFromTo**
+
+```jsx
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+const GsapFromTo = () => {
+  // TODO: Implement the gsap.fromTo() method
+  useGSAP(() => {
+    gsap.fromTo('#red-box', {
+      x: 0,
+      rotation: 0,
+      borderRadius: '0%'
+    },
+      {
+        x: 250,
+        repeat: -1,
+        yoyo: true,
+        borderRadius: '100%',
+        rotation: 360,
+        duration: 2,
+        ease: 'bounce.out'
+      }
+    )
+  });
 ```
 
 
